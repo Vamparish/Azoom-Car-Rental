@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - AZoom</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+            <span>AZoom</span>
+        </div>
+        <nav>
+            <ul>    
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Rent</a></li>
+                <li id="navMyBookings"><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="login.html" id="navAuthLink">Login</a></li>
+            </ul>
+        </nav>
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode">⏾</button>
+    </header>
+
+    <main class="booking-main">
+        <div class="booking-container" style="max-width: 900px;">
+            <h1 class="booking-title">My Bookings</h1>
+            <p style="text-align: center; margin-bottom: 30px;">Here are all the cars you have reserved with AZoom.</p>
+
+            <div id="customerBookingsList" class="staff-dashboard">
+                <!-- Bookings will be injected here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2026 AZoom Car Rental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

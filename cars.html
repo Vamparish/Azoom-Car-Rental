@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cars - AZoom</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+            <span>AZoom</span>
+        </div>
+        <nav>
+            <ul>    
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Rent</a></li>
+                <li id="navMyBookings" style="display: none;"><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="login.html" id="navAuthLink">Login</a></li>
+            </ul>
+        </nav>
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode">⏾</button>
+    </header>
+
+    <main>
+        <section class="cars" style="padding: 50px 60px; min-height: 60vh;">
+            <h2 style="text-align: center; margin-bottom: 40px; color: orange;">Available Cars</h2>
+            
+            <div class="filter-container">
+                <button class="filter-btn" data-filter="All">All</button> 
+                <button class="filter-btn" data-filter="Sedan">Sedan</button>
+                <button class="filter-btn" data-filter="SUV">SUV</button>
+                <button class="filter-btn" data-filter="Luxury">Luxury</button>
+                <button class="filter-btn" data-filter="Electric">Electric</button>  
+            </div>
+
+            <div class="car-grid" id="allCarsGrid">
+                <!-- JavaScript will inject the car cards into this div -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2026 AZoom Car Rental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

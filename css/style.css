@@ -1,0 +1,1172 @@
+/* =========================================
+   GLOBAL STYLES
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+/* =========================================
+   LOGO
+   ========================================= */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color:black;
+    display: flex;
+    align-items: center;
+
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+nav ul {
+    color:white;
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+nav a {
+    color:black;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+.hero {
+    background-color: grey;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('../images/mainbg.jpg') center/cover;
+}
+
+.hero-content {
+    color:white;
+    font-weight:bold;
+    
+}
+
+.hero h1 {
+    font-size: 70px;
+    
+}
+
+.hero p {
+    font-size: 20px;    
+    padding: 30px ;
+}
+
+/* =========================================
+   BUTTON
+   ========================================= */
+.btn {
+    background-color: orange;
+    color: black;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* =========================================
+   PROMOTIONS
+   ========================================= */
+.promotions {
+    align-items: center;
+    text-align: center;    
+}
+
+.promotions h2 {
+    color: orange;
+}
+
+.promotion-container {
+    /* TODO: Use Flexbox */
+    display: flex;
+    gap: 20px;
+    align-items: center;    
+}
+
+.promotion-card {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    gap: 10px;
+}
+
+/* =========================================
+   CARS
+   ========================================= */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.car-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.car-card h3 {
+    margin: 10px 20px;
+}
+
+.car-card p {
+    margin: 10px 20px;
+}
+.car-card .btn {
+    display: inline-block;
+    margin-left: 20px;
+}
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; 
+    background-color: #f4f4f4; 
+    padding: 10px; 
+}
+
+/* Add dark mode for the image background */
+body.dark .car-card img {
+    background-color: #1a1a1a;
+}
+
+/* =========================================
+   CAR FILTER BUTTONS
+   ========================================= */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: orange;
+}
+
+.filter-btn.active {
+    background-color: orange;
+    border-color: orange;
+    color: black;
+}
+
+body.dark .filter-btn {
+    background-color: #2a2a2a;
+    border-color: #555;
+    color: #f4f4f4;
+}
+
+body.dark .filter-btn.active {
+    background-color: orange;
+    border-color: orange;
+    color: black;
+}
+
+/* =========================================
+   TESTIMONIALS
+   ========================================= */
+
+.testimonials {
+    flex: 1;
+    padding: 25px;
+    border-radius: 10px;
+
+}
+
+.testimonial-container {
+    display: flex;
+    gap: 20px;
+}
+
+.testimonial {
+    /* TODO */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    padding: 60px 60px 20px 60px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+footer p {
+    color: #bbbbbb;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    margin-bottom: 12px;
+}
+
+footer a {
+    color: #bbbbbb;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 25px;
+    margin-top: 40px;
+    border-top: 1px solid #333333; 
+    font-size: 14px;
+    color: #888888;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 768px) {
+    .car-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .car-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   DARK MODE STYLES
+   ========================================= */
+body.dark {
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+}
+
+body.dark header {
+    background-color: #222;
+}
+
+body.dark nav a, 
+body.dark .logo span {
+    color: #f4f4f4;
+}
+
+body.dark .car-card, 
+body.dark .testimonial {
+    background-color: #2a2a2a;
+    border-color: #444;
+}
+
+body.dark main {
+    background-color: #1a1a1a !important;
+}
+
+body.dark #rentCarDetails,
+body.dark form {
+    color: #f4f4f4;
+}
+
+body.dark form input {
+    background-color: #333;
+    color: white;
+    border-color: #555;
+}
+
+/* =========================================
+   THEME TOGGLE BUTTON
+   ========================================= */
+.theme-btn {
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 50%; 
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1) rotate(15deg); 
+}
+
+/* Dark mode styles for the button */
+body.dark .theme-btn {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+body.dark .theme-btn:hover {
+    background-color: #444444;
+}
+
+/* =========================================
+   RENT PAGE (BOOKING FORM) STYLES
+   ========================================= */
+
+.booking-main {
+    padding: 50px 20px; 
+    background: #f9f9f9; 
+    min-height: 80vh;
+}
+
+.booking-container {
+    max-width: 800px; 
+    margin: 0 auto; 
+    background: white; 
+    color: #333;
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.booking-title {
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+.booking-divider {
+    margin-bottom: 30px; 
+    border: 1px solid #ddd;
+}
+
+.booking-form {
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px;
+}
+
+.booking-form label {
+    font-weight: bold;
+}
+
+.booking-form input {
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    width: 100%;
+    font-family: inherit;
+}
+
+.date-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    width: 100%; 
+}
+
+.date-row > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.date-row input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#rentCarDetails img {
+    width: 100%; 
+    height: auto; 
+    max-height: 400px;
+    object-fit: contain; 
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: #f4f4f4;
+}
+
+/* Dark mode for the image background */
+body.dark #rentCarDetails img {
+    background-color: #1a1a1a; 
+}
+
+/* =========================================
+   RENT PAGE DARK MODE OVERRIDES
+   ========================================= */
+body.dark .booking-main {
+    background: #1a1a1a; 
+}
+
+body.dark .booking-container {
+    background: #2a2a2a; 
+    color: #f4f4f4;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+body.dark .booking-divider {
+    border-color: #444;
+}
+
+body.dark .booking-form input {
+    background: #333; 
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark .booking-form input:focus {
+    border-color: orange;
+    outline: none;
+}
+
+/* =========================================
+   BACK BUTTON STYLES
+   ========================================= */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #e0e0e0;
+    transform: translateX(-5px);
+}
+
+/* Dark Mode */
+body.dark .back-btn {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+body.dark .back-btn:hover {
+    background-color: #444;
+}
+
+/* =========================================
+   LOGIN TOGGLE TABS
+   ========================================= */
+.login-toggle {
+    display: flex;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #ddd;
+}
+
+body.dark .login-toggle {
+    border-bottom: 2px solid #444;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 12px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.toggle-btn:hover {
+    color: #333;
+}
+
+body.dark .toggle-btn:hover {
+    color: #fff;
+}
+
+.toggle-btn.active {
+    color: orange;
+    border-bottom: 3px solid orange;
+}
+
+/* =========================================
+   LOGIN PAGE STYLES
+   ========================================= */
+.login-container {
+    max-width: 420px; 
+    margin: 60px auto; 
+}
+
+.login-subtitle {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+body.dark .login-subtitle {
+    color: #aaa;
+}
+
+/* Toggle Switch between Customer and Staff */
+.login-toggle {
+    display: flex;
+    background-color: #f1f1f1;
+    padding: 5px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+body.dark .login-toggle {
+    background-color: #222;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.dark .toggle-btn {
+    color: #aaa;
+}
+
+.toggle-btn.active {
+    background-color: #ffffff;
+    color: #000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.dark .toggle-btn.active {
+    background-color: #444;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+body.dark .booking-form input {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+}
+
+/* =========================================
+   LOCATION SELECTION & RECEIPT STYLES
+   ========================================= */
+.location-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.location-row > div {
+    flex: 1;
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+}
+
+body.dark .form-select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.receipt-panel {
+    background: #f0fdf4; 
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+body.dark .receipt-panel {
+    background: #1a2a1a;
+    border-color: #4CAF50;
+}
+
+.receipt-details {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+body.dark .receipt-details {
+    background: #2a2a2a;
+}
+
+.receipt-details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   BIG PAY & RESERVE BUTTON
+   ========================================= */
+.pay-btn-wrapper {
+    display: block; 
+    width: 100%;
+    text-align: center; 
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.pay-btn {
+    display: inline-block; 
+    width: 80%; 
+    max-width: 400px;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.pay-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 165, 0, 0.5);
+}
+
+body.dark .pay-btn {
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.2);
+}
+
+/* =========================================
+   STAFF DASHBOARD STYLES
+   ========================================= */
+.staff-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.staff-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+body.dark .staff-card {
+    background: #2a2a2a;
+    border-color: #444;
+}
+
+.staff-card-header {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+body.dark .staff-card-header {
+    border-color: #444;
+}
+
+.staff-card-header h3 {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Status Badges */
+.status-badge {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.status-reserved { background: #fef3c7; color: #92400e; }
+.status-rented { background: #dbeafe; color: #1e40af; }
+.status-returned { background: #fee2e2; color: #991b1b; }
+.status-inspected { background: #f3e8ff; color: #6b21a8; }
+.status-completed { background: #d1fae5; color: #065f46; }
+
+.staff-card-details {
+    font-size: 14px;
+    color: #555;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+body.dark .staff-card-details {
+    color: #ccc;
+}
+
+.staff-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.btn-action {
+    padding: 12px 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    width: auto;
+}
+
+.btn-rent { background-color: #10b981; color: white; }
+.btn-return { background-color: #3b82f6; color: white; }
+.btn-inspect { background-color: #8b5cf6; color: white; }
+.btn-bill { background-color: #f59e0b; color: white; }
+
+/* =========================================
+   INLINE STAFF ACTIONS 
+   ========================================= */
+.inline-inspection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+body.dark .inline-inspection {
+    background: #1a1a1a;
+    border-color: #444;
+}
+
+.inline-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px;
+    font-size: 15px;
+}
+
+body.dark .inline-input {
+    background: #333;
+    color: white;
+    border-color: #555;
+}
+
+.inline-bill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #f0fdf4;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #4CAF50;
+    width: 100%;
+}
+
+body.dark .inline-bill {
+    background: #1a2a1a;
+    border-color: #4CAF50;
+}
+
+.bill-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #333;
+}
+
+body.dark .bill-breakdown {
+    color: #ccc;
+}
+
+.bill-breakdown strong {
+    font-size: 18px;
+    color: #4CAF50;
+}
+
+/* =========================================
+   DYNAMIC PRICE SUMMARY BOX
+   ========================================= */
+.price-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+body.dark .price-summary {
+    background: #222;
+    border-color: #444;
+}
+
+.price-summary strong {
+    font-size: 22px;
+    color: orange;
+}
+
+/* =========================================
+   CUSTOMER BILL BOX (SMALL & DARK MODE FIX)
+   ========================================= */
+.customer-bill-box {
+    margin-top: 15px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid orange;
+    max-width: 350px; 
+}
+
+/* Dark mode background fix */
+body.dark .customer-bill-box {
+    background: #1a1a1a; 
+}
+
+.customer-bill-box h4 {
+    color: orange;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.customer-bill-box p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: inherit; 
+}
+
+.customer-bill-box h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: inherit;
+}
+
+.customer-bill-box .btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* =========================================
+   CUSTOMER SUCCESS BOX
+   ========================================= */
+.customer-success-box {
+    margin-top: 15px;
+    background: #f0fdf4;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #4CAF50;
+    max-width: 350px; 
+}
+
+body.dark .customer-success-box {
+    background: #1a2a1a; 
+}
+
+.customer-success-box h4 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.customer-success-box p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: inherit;
+}
+
+/* =========================================
+   INLINE AUTH MESSAGES 
+   ========================================= */
+.auth-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.auth-message.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #f87171;
+}
+
+.auth-message.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #34d399;
+}
+
+body.dark .auth-message.error {
+    background-color: #3b1a1a;
+    color: #f87171;
+    border-color: #991b1b;
+}
+
+body.dark .auth-message.success {
+    background-color: #1a2a1a;
+    color: #34d399;
+    border-color: #065f46;
+}
+
+/* =========================================
+   MOBILE & TABLET Use
+   ========================================= */
+
+body {
+    overflow-x: hidden; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    /* Header & Navigation */
+    header {
+        flex-direction: column; 
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    
+    nav ul {
+        gap: 20px;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: 400px;
+        padding: 20px;
+    }
+    
+    .hero h1 {
+        font-size: 40px; 
+    }
+
+    /* Grids (Cars & Footer) */
+    .car-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cars per row */
+        gap: 15px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for footer */
+        gap: 20px;
+    }
+
+    /* Booking Form (Rent Page) */
+    .booking-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .date-row, .location-row {
+        grid-template-columns: 1fr; /* Stacks dates and locations vertically */
+        gap: 15px;
+    }
+
+    /* Staff Dashboard Cards */
+    .staff-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .staff-card-details {
+        grid-template-columns: 1fr;
+    }
+
+    /* Inline Bill / Inspection (Staff Dashboard) */
+    .inline-bill, .inline-inspection {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .bill-breakdown {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/*Smartphones */
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+        padding: 15px 0;
+    }
+
+    /* Nav Links  */
+    nav a {
+        font-size: 14px;
+    }
+
+    /* Grids  */
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* Login Tabs */
+    .login-toggle {
+        flex-direction: column; /* Stacks Customer/Staff tabs on tiny screens */
+        border-radius: 10px;
+    }
+
+    /* Big Buttons */
+    .pay-btn {
+        width: 100%; /* Makes the pay button full width on phones */
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    /* Receipt & Bill Boxes */
+    .receipt-panel, .customer-bill-box, .customer-success-box {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    /* Make Back button easier to tap */
+    .back-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Remove up/down arrows from the Damage Cost input */
+.inline-input::-webkit-outer-spin-button,
+.inline-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
