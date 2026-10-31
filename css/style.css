@@ -86,7 +86,6 @@ nav a {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .hero-content {
     color:white;
     font-weight:bold;
@@ -127,7 +126,6 @@ nav a {
 }
 
 .promotion-container {
-    /* TODO: Use Flexbox */
     display: flex;
     gap: 20px;
     align-items: center;    
@@ -150,7 +148,6 @@ nav a {
     margin-bottom: 2rem; 
     font-size: 2rem;
 }
-
 .car-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
