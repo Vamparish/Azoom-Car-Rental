@@ -76,9 +76,10 @@ nav a {
     align-items: center;
     justify-content: center;
     text-align: center;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url('../images/mainbg.jpg') center/cover;
-   animation: fadeIn 1.2s ease-in;
+    animation: fadeIn 1.2s ease-in;
+    margin-bottom: 50px; 
 }
 
 @keyframes fadeIn {
@@ -94,7 +95,6 @@ nav a {
 
 .hero h1 {
     font-size: 70px;
-    
 }
 
 .hero p {
@@ -145,6 +145,13 @@ nav a {
 /* =========================================
    CARS
    ========================================= */
+.cars h2{
+    text-align: center;
+    margin-bottom: 2rem; 
+    font-size: 2rem;
+    color: black;
+}
+
 .car-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
